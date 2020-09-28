@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>X and Y</title>
+</head>
+<body>
+<form action="">
+    <p><input type="number" name="" id="numberX" value="60"></p>
+    <p><input type="number" name="" id="numberY" value="60"></p>
+    <p><input type="submit" value="Задать X и Y" onclick="setXY()"></p>
+</form>
+
+<script>
+    function setXY() {
+        var numberx = document.getElementById('numberX').value;
+        var numbery = document.getElementById('numberY').value;
+        console.log(numberx, numbery);
+        alert('Данные сохранены')
+    }
+</script>
+
+</body>
+</html>

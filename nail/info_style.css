@@ -1,0 +1,39 @@
+/*@import url("https://fonts.googleapis.com/css?family=Kurale|Open+Sans:400i&display=swap");*/
+/*@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');*/
+@font-face {
+    font-family: 'Russo One', sans-serif;
+    src: url('RussoOne-Regular.ttf') format('woff2'),
+    url('RussoOne-Regular.ttf') format('woff'),
+    url('RussoOne-Regular.ttf') format('truetype');
+}
+body{
+    /*background: #dcfdff url(images/blueBackground.jpg) 0 0 no-repeat;*/
+    background: #FFFDFC;
+    background-size: 100%;
+    /*font-family: 'Roboto Slab', serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*font-family: 'Big Shoulders Display', cursive;*/
+    font-family: 'Russo One', sans-serif;
+    /*font-family: 'Cuprum', sans-serif;*/
+    /*min-width: 600px;*/
+}
+main{
+    width: 646px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: auto;
+}
+
+h1{
+    /*text-decoration: underline;*/
+    text-align: center;
+    font-size: 36px;
+    /*font-family: 'Kurale', serif;*/
+    /*font-family: 'Roboto Slab', serif;*/
+    /*font-style: italic;*/
+}
+p{
+    text-indent: 25px;
+    font-size: 18px;
+    text-align: justify;
+}

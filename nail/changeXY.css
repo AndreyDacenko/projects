@@ -1,0 +1,52 @@
+body{
+    background: #FFFDFC;
+    margin: 40px;
+    padding: 0;
+    font-family: 'Russo One', sans-serif;
+}
+
+form p{
+    /*margin-bottom: 30px;*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Russo One', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+form div{
+    margin-bottom: 20px;
+}
+
+#numberX, #numberY, #lenW, #lenH{
+    /*width: 268px;*/
+    /*margin-left: 20px;*/
+    width: 175px;
+    height: 30px;
+    font-size: 24px;
+    font-family: 'Russo One', sans-serif;
+    /*transition: 1s;*/
+    border: 1px solid #333333;
+}
+
+#submitButton{
+    width: 300px;
+    height: 44px;
+    font-size: 24px;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    background: #333;
+    border: 3px solid;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+#submitButton:hover {
+    background: #fff;
+    color: #333;
+}
+
+#submitButton:active {
+    background: white;
+}

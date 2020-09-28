@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Parameters</title>
+    <link rel="stylesheet" type="text/css" href="changeXY.css">
+</head>
+<body>
+<form action="">
+    <div class="sx">
+        <p>Шаг по X:</p>
+        <p><input type="number" name="" id="numberX" placeholder="от 1 до 150" min="1" max="150" step="1" required autofocus onfocus="this.placeholder = ''" onblur="this.placeholder = 'от 1 до 150'"></p>
+    </div>
+    <div class="sy">
+        <p>Шаг по Y:</p>
+        <p><input type="number" name="" id="numberY" placeholder="от 1 до 150" min="1" max="150" step="1" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'от 1 до 150'"></p>
+    </div>
+    <div class="lw">
+        <p>Длинна квадрата:</p>
+        <p><input type="number" name="" id="lenW" placeholder="от 50 до 450" min="50" max="450" step="1" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'от 50 до 450'"></p>
+    </div>
+    <div class="lh">
+        <p>Высота квадрата:</p>
+        <p><input type="number" name="" id="lenH" placeholder="от 50 до 450" min="50" max="450" step="1" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'от 50 до 450'"></p>
+    </div>
+    <p><input type="submit" value="Сохранить изменения" onclick="setXY()" id="submitButton"></p>
+</form>
+
+<script>
+    const fs = require('fs');
+    function setXY() {
+
+        var numberx = document.getElementById('numberX').value;
+        var numbery = document.getElementById('numberY').value;
+        var lenw = document.getElementById('lenW').value;
+        var lenh = document.getElementById('lenH').value;
+        if ((numbery > 0) & (numbery > 0) & (numberx < 151) & (numbery < 151) & (lenw >49) & (lenw < 451) & (lenh > 49) & (lenh < 451)) {
+            alert('Значения изменены на:\n'+ 'X: ' + numberx + '\nY: ' + numbery + '\nW: ' + lenw + '\nH: ' + lenh)
+        }
+        let list = numberx + '\n' + numbery + '\n' + lenw + '\n' + lenh
+        fs.writeFile("config.txt", (list), function(err) {
+            if (err) {
+                return console.log(err);
+            }
+        })
+        fs.writeFile("nails//config.txt", (list), function(err) {
+            if (err) {
+                return console.log(err);
+            }
+        })
+
+    }
+</script>
+
+</body>
+</html>

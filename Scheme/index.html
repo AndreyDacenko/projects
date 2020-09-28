@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" http-equiv="Cache-Control" content="no-cache">
+    <title>Verefication</title>
+<!--    <link rel="stylesheet" href="bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <!--<script>-->
+    <!--    window.$ = windowjQuery = require("jquery");-->
+    <!--</script>-->
+    <script src="jquery.min.js"></script>
+    <script src="dragscroll-master/dragscroll.js"></script>
+    <script src="mousewheel.min.js"></script>
+    <script src="hammer.min.js"></script>
+    <script src="tweenmax.min.js"></script>
+    <script src="script.js"></script>
+    <script>if (window.module) module = window.module;</script>
+</head>
+<body onload="clickButton1()">
+<header>
+
+</header>
+
+<main>
+    <div class="main-container">
+        <div class="main_pictures">
+            <div class="tab">
+                <button class="tablinks" onclick="openNail(event, 'content_tab_3')" id="tab3">Изображение</button>
+                <button class="tablinks" onclick="openNail(event, 'content_tab_4')" id="tab4">Маска</button>
+                <button class="tablinks" onclick="openNail(event, 'content_tab_1')" id="tab1">Новые элементы</button>
+                <button class="tablinks" onclick="openNail(event, 'content_tab_2')" id="tab2">Отсутствующие элементы</button>
+                <button class="tablinks" onclick="openNail(event, 'content_tab_5')" id="tab5">Результат НА</button>
+<!--                <button class="tablinks" onclick="openNail(event, 'content_tab_6')" id="tab6">Подробнее</button>-->
+            </div>
+
+            <div id="content_tab_3" class="tabcontent">
+                <div id="vk3" class="zoomHolder">
+                    <img  alt="">
+                </div>
+            </div>
+            <div id="content_tab_4" class="tabcontent">
+                <div id="vk4" class="zoomHolder">
+                </div>
+            </div>
+            <div id="content_tab_1" class="tabcontent">
+                <div id="vk1" class="zoomHolder">
+<!--                    <img src="C:\Users\Admin\Desktop\Scheme\images\background.png" data-elem="pinchzoomer" data-options="scaleMode:proportionalInside" >-->
+                </div>
+            </div>
+            <div id="content_tab_2" class="tabcontent">
+                <div id="vk2" class="zoomHolder">
+                </div>
+            </div>
+
+            <div id="content_tab_5" class="tabcontent">
+                <div id="vk5" class="dragscroll">
+                </div>
+            </div>
+<!--            <div id="content_tab_6" class="tabcontent">-->
+<!--                <div id="vk6" class="dragscroll">-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+        <div class="right_block">
+            <button class="btn" id="make_image" onclick="create_image()">Выбрать изображение</button>
+            <button class="btn" id="make_mask" onclick="create_mask()">Выбрать маску</button>
+            <button class="btn" id="make_calk" onclick="create_calc()">Анализ</button>
+<!--            <button class="btn" id="neeroset_analysis" onclick="create_neeroset()" style="background: #d5d5d3 url(images/waiting.gif) 0 -22px no-repeat; background-size: 100%; color: #f67519;">Нейросетевой анализ</button>-->
+            <button class="btn" id="neeroset_analysis" onclick="create_neeroset()">
+                <div id="floatingCirclesG">
+                    <div class="f_circleG" id="frotateG_01"></div>
+                    <div class="f_circleG" id="frotateG_02"></div>
+                    <div class="f_circleG" id="frotateG_03"></div>
+                    <div class="f_circleG" id="frotateG_04"></div>
+                    <div class="f_circleG" id="frotateG_05"></div>
+                    <div class="f_circleG" id="frotateG_06"></div>
+                    <div class="f_circleG" id="frotateG_07"></div>
+                    <div class="f_circleG" id="frotateG_08"></div>
+                </div>
+                <div id="neeroset_butoon_text">Нейросетевой анализ</div>
+                </button>
+            <button class="btn" >Технологические дефекты <div id="teh_def_number"><p>0</p></div></button>
+            <button class="btn">Тестовые<br>блоки <div id="text_blocks"><p>0</p></div></button>
+            <button class="btn">Аппаратный троян <div id="apparat_troyan"><p>0</p></div></button>
+            <button class="btn" id="zavod_change">Заводские изменения <div id="zavodskie_izmen"><p>0</p></button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="progress" >
+            <progress id="line" class="progress_line">  </progress>
+            <div id="number">0%</div>
+        </div>
+        <div id="progress_text">
+        </div>
+    </div>
+</footer>
+
+<script src="render.js"></script>
+</body>
+</html>

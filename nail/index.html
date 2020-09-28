@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" http-equiv="Cache-Control" content="no-cache">
+    <title>Nail Ai</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body onload="enableCamera(), clickButton1()">
+<header>
+
+</header>
+<main>
+    <div class="topHead">
+        <div class="topHeadText"></div>
+<!--        <div class="polosa1"></div>-->
+        <div class="polosa2"></div>
+
+    </div>
+
+    <div class="main-container">
+        <div class="left-container">
+
+            <div id="bodyback">
+                <video id="video"></video>
+            </div>
+
+            <div class="nailPictures">
+
+                <div class="picture1">
+                    <div id="nailPicture1"></div>
+                    <div>
+                        <button id="nail1">Ноготь 1</button>
+                    </div>
+                </div>
+
+                <div class="picture2">
+                    <div id="nailPicture2"></div>
+                    <div>
+                        <button id="nail2" onclick="shotNail2()">Ноготь 2</button>
+                    </div>
+                </div>
+
+                <div class="picture3">
+                    <div id="nailPicture3"></div>
+                    <div>
+                        <button id="nail3" onclick="shotNail3()">Ноготь 3</button>
+                    </div>
+                </div>
+
+                <div class="picture4">
+                    <div id="nailPicture4"></div>
+                    <div>
+                        <button id="nail4" onclick="shotNail4()">Ноготь 4</button>
+                    </div>
+                </div>
+
+                <div class="picture5">
+                    <div id="nailPicture5"></div>
+                    <div>
+                        <button id="nail5" onclick="shotNail5()">Ноготь 5</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="button-block">
+                <button class="btn" id="mybutton" onclick="analysis()">Анализ</button>
+                <button class="btn" id="recomendation" onclick="getInfo()">Рекомендации</button>
+                <button class="btn" id="clear" onclick="clearImages()">Очистить результат</button>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="tab">
+                <button class="tablinks" onclick="openNail(event, 'bigNail1')" id="bigNailButton1">Ноготь 1</button>
+                <button class="tablinks" onclick="openNail(event, 'bigNail2')" id="bigNailButton2">Ноготь 2</button>
+                <button class="tablinks" onclick="openNail(event, 'bigNail3')" id="bigNailButton3">Ноготь 3</button>
+                <button class="tablinks" onclick="openNail(event, 'bigNail4')" id="bigNailButton4">Ноготь 4</button>
+                <button class="tablinks" onclick="openNail(event, 'bigNail5')" id="bigNailButton5">Ноготь 5</button>
+            </div>
+
+            <div id="bigNail1" class="tabcontent">
+                <div id="big_nail"></div>
+            </div>
+            <div id="bigNail2" class="tabcontent">
+                <div id="big_nail"></div>
+            </div>
+            <div id="bigNail3" class="tabcontent">
+                <div id="big_nail"></div>
+            </div>
+            <div id="bigNail4" class="tabcontent">
+                <div id="big_nail"></div>
+            </div>
+            <div id="bigNail5" class="tabcontent">
+                <div id="big_nail"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footerPoloska1"></div>
+    <div class="footerPoloska2"></div>
+</footer>
+<script src="render.js"></script>
+
+</body>
+</html>
